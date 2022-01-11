@@ -1,0 +1,454 @@
+{
+  "$id": "1",
+  "Version": 2,
+  "Id": "476f242d-6076-45d9-9e3a-e939e850e583",
+  "BaseHeight": 140,
+  "BaseWidth": 115,
+  "BackgroundColor": "#FF000000",
+  "Screens": {
+    "$id": "2",
+    "$values": [
+      {
+        "$id": "3",
+        "RenderingSkip": 0,
+        "InGameScreen": true,
+        "IdleScreen": true,
+        "PitScreen": true,
+        "ScreenScript": {
+          "$id": "4",
+          "Interpreter": 1
+        },
+        "BackgroundColor": "#00FFFFFF",
+        "IsSelected": false,
+        "Items": {
+          "$id": "5",
+          "$values": [
+            {
+              "$id": "6",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+              "IsTextItem": true,
+              "ShadowDepth": 0,
+              "ShadowBlur": 0,
+              "ShadowDirection": 315,
+              "ShadowColor": "#FF808080",
+              "Font": "Arial",
+              "FontWeight": "Normal",
+              "TextWrapping": 1,
+              "FontStyle": "Normal",
+              "FontSize": 32.0,
+              "Text": "-.--",
+              "TextColor": "#FFFFFFFF",
+              "HorizontalAlignment": 1,
+              "VerticalAlignment": 1,
+              "UseMonospacedText": false,
+              "CharWidth": 40.0,
+              "SpecialCharsWidth": 20.0,
+              "SpecialChars": ".,:;",
+              "TextMask": "",
+              "TextMaskColor": "#FF808080",
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "7",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 0,
+                "BorderLeft": 0,
+                "BorderRight": 0,
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "8"
+                }
+              },
+              "Height": 50.0,
+              "Left": 0.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 115.0,
+              "BorderBottom": 0,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "a5b6dcd5-724b-4492-908c-9715eb7123a2",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "Live Delta To Session Best",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "9",
+                "Text": {
+                  "$id": "10",
+                  "Formula": {
+                    "$id": "11",
+                    "Interpreter": 1,
+                    "Expression": "return DBSH_getDelta('PersistantTrackerPlugin.SessionBest', 'PersistantTrackerPlugin.SessionBestLiveDeltaSeconds', '-.--');"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Text"
+                },
+                "TextColor": {
+                  "$id": "12",
+                  "Formula": {
+                    "$id": "13",
+                    "Interpreter": 1,
+                    "Expression": "return DBSH_getDelta('PersistantTrackerPlugin.SessionBest', 'PersistantTrackerPlugin.SessionBestLiveDeltaSeconds', 0);"
+                  },
+                  "StartColor": "#FF90EE90",
+                  "EnableMiddleColor": true,
+                  "MiddleColor": "#FFFFFFFF",
+                  "MiddleColorValue": 0.0,
+                  "EndColor": "#FFDC143C",
+                  "StartColorValue": -0.5,
+                  "EndColorValue": 0.5,
+                  "Mode": 4,
+                  "TargetPropertyName": "TextColor"
+                }
+              }
+            },
+            {
+              "$id": "14",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+              "IsTextItem": true,
+              "ShadowDepth": 0,
+              "ShadowBlur": 0,
+              "ShadowDirection": 315,
+              "ShadowColor": "#FF808080",
+              "Font": "Arial",
+              "FontWeight": "Normal",
+              "TextWrapping": 1,
+              "FontStyle": "Normal",
+              "FontSize": 22.0,
+              "Text": "-:--.---",
+              "TextColor": "#FF00BFFF",
+              "HorizontalAlignment": 1,
+              "VerticalAlignment": 1,
+              "UseMonospacedText": false,
+              "CharWidth": 40.0,
+              "SpecialCharsWidth": 20.0,
+              "SpecialChars": ".,:;",
+              "TextMask": "",
+              "TextMaskColor": "#FF808080",
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "15",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 0,
+                "BorderLeft": 0,
+                "BorderRight": 0,
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "16"
+                }
+              },
+              "Height": 30.0,
+              "Left": 0.0,
+              "Opacity": 100.0,
+              "Top": 110.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 115.0,
+              "BorderBottom": 0,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "6801733a-611f-4e8b-b191-3f9956161f6d",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "Session Best",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "17",
+                "Text": {
+                  "$id": "18",
+                  "FormatString": "m\\:ss\\.fff",
+                  "Formula": {
+                    "$id": "19",
+                    "Interpreter": 1,
+                    "Expression": "return DBSH_getTime('PersistantTrackerPlugin.SessionBest', '-:--.---');\r\n"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Text"
+                }
+              }
+            }
+          ]
+        },
+        "Id": "95be8955-de0b-462d-9a4d-8ed3e90eeeb8",
+        "Name": "Screen1",
+        "Sid": 0,
+        "Bindings": {
+          "$id": "20"
+        }
+      },
+      {
+        "$id": "21",
+        "RenderingSkip": 0,
+        "InGameScreen": true,
+        "IdleScreen": true,
+        "PitScreen": true,
+        "ScreenScript": {
+          "$id": "22",
+          "Interpreter": 1
+        },
+        "BackgroundColor": "#00FFFFFF",
+        "IsSelected": true,
+        "Items": {
+          "$id": "23",
+          "$values": [
+            {
+              "$id": "24",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+              "IsTextItem": true,
+              "ShadowDepth": 0,
+              "ShadowBlur": 0,
+              "ShadowDirection": 315,
+              "ShadowColor": "#FF808080",
+              "Font": "Arial",
+              "FontWeight": "Normal",
+              "TextWrapping": 1,
+              "FontStyle": "Italic",
+              "FontSize": 32.0,
+              "Text": "-.--",
+              "TextColor": "#FFFFFFFF",
+              "HorizontalAlignment": 1,
+              "VerticalAlignment": 1,
+              "UseMonospacedText": false,
+              "CharWidth": 40.0,
+              "SpecialCharsWidth": 20.0,
+              "SpecialChars": ".,:;",
+              "TextMask": "",
+              "TextMaskColor": "#FF808080",
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "25",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 0,
+                "BorderLeft": 0,
+                "BorderRight": 0,
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "26"
+                }
+              },
+              "Height": 50.0,
+              "Left": 0.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 115.0,
+              "BorderBottom": 0,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "a5b6dcd5-724b-4492-908c-9715eb7123a2",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "Live Delta To All Time Best",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "27",
+                "Text": {
+                  "$id": "28",
+                  "Formula": {
+                    "$id": "29",
+                    "Interpreter": 1,
+                    "Expression": "return DBSH_getDelta('PersistantTrackerPlugin.AllTimeBest', 'PersistantTrackerPlugin.AllTimeBestLiveDeltaSeconds', '-.--');\r\n"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Text"
+                },
+                "TextColor": {
+                  "$id": "30",
+                  "Formula": {
+                    "$id": "31",
+                    "Interpreter": 1,
+                    "Expression": "return DBSH_getDelta('PersistantTrackerPlugin.AllTimeBest', 'PersistantTrackerPlugin.AllTimeBestLiveDeltaSeconds', 0);\r\n"
+                  },
+                  "StartColor": "#FF90EE90",
+                  "EnableMiddleColor": true,
+                  "MiddleColor": "#FFFFFFFF",
+                  "MiddleColorValue": 0.0,
+                  "EndColor": "#FFDC143C",
+                  "StartColorValue": -0.5,
+                  "EndColorValue": 0.5,
+                  "Mode": 4,
+                  "TargetPropertyName": "TextColor"
+                }
+              }
+            },
+            {
+              "$id": "32",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.TextItem, SimHub.Plugins",
+              "IsTextItem": true,
+              "ShadowDepth": 0,
+              "ShadowBlur": 0,
+              "ShadowDirection": 315,
+              "ShadowColor": "#FF808080",
+              "Font": "Arial",
+              "FontWeight": "Normal",
+              "TextWrapping": 1,
+              "FontStyle": "Italic",
+              "FontSize": 22.0,
+              "Text": "-:--.---",
+              "TextColor": "#FF00BFFF",
+              "HorizontalAlignment": 1,
+              "VerticalAlignment": 1,
+              "UseMonospacedText": false,
+              "CharWidth": 40.0,
+              "SpecialCharsWidth": 20.0,
+              "SpecialChars": ".,:;",
+              "TextMask": "",
+              "TextMaskColor": "#FF808080",
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "33",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 0,
+                "BorderLeft": 0,
+                "BorderRight": 0,
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "34"
+                }
+              },
+              "Height": 30.0,
+              "Left": 0.0,
+              "Opacity": 100.0,
+              "Top": 110.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 115.0,
+              "BorderBottom": 0,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "6801733a-611f-4e8b-b191-3f9956161f6d",
+              "IsFreezed": false,
+              "IsSelected": true,
+              "Name": "All Time Best",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "35",
+                "Text": {
+                  "$id": "36",
+                  "FormatString": "m\\:ss\\.fff",
+                  "Formula": {
+                    "$id": "37",
+                    "Interpreter": 1,
+                    "Expression": "return DBSH_getTime('PersistantTrackerPlugin.AllTimeBest', '-:--.---');"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Text"
+                }
+              }
+            }
+          ]
+        },
+        "Id": "725e733b-cc96-4a00-a76b-cc57f393d1b0",
+        "Name": "Screen2",
+        "Sid": 0,
+        "Bindings": {
+          "$id": "38"
+        }
+      }
+    ]
+  },
+  "SnapToGrid": true,
+  "HideLabels": true,
+  "ShowBoundingRectangles": true,
+  "GridSize": 5,
+  "SelectedScreen": {
+    "$ref": "21"
+  },
+  "Images": {
+    "$id": "39",
+    "$values": []
+  },
+  "Metadata": {
+    "$id": "40",
+    "ScreenCount": 2.0,
+    "InGameScreensIndexs": {
+      "$id": "41",
+      "$values": [
+        0,
+        1
+      ]
+    },
+    "IdleScreensIndexs": {
+      "$id": "42",
+      "$values": [
+        0,
+        1
+      ]
+    },
+    "MainPreviewIndex": 0,
+    "IsOverlay": false,
+    "ShowInTaskBar": true,
+    "Width": 115.0,
+    "Height": 140.0,
+    "OverlaySizeWarning": false,
+    "MetadataVersion": 2.0,
+    "EnableOnDashboardMessaging": true,
+    "PitScreensIndexs": {
+      "$id": "43",
+      "$values": [
+        0,
+        1
+      ]
+    }
+  },
+  "ShowOnScreenControls": true,
+  "ShowInTaskBar": true,
+  "IsOverlay": false,
+  "EnableClickThroughOverlay": true,
+  "EnableOnDashboardMessaging": true
+}

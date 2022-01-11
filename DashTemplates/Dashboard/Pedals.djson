@@ -1,0 +1,710 @@
+{
+  "$id": "1",
+  "Version": 2,
+  "Id": "e0ac052b-8f68-4f79-8b1f-074313004c96",
+  "BaseHeight": 240,
+  "BaseWidth": 425,
+  "BackgroundColor": "#FF000000",
+  "Screens": {
+    "$id": "2",
+    "$values": [
+      {
+        "$id": "3",
+        "RenderingSkip": 0,
+        "InGameScreen": true,
+        "IdleScreen": true,
+        "PitScreen": true,
+        "ScreenScript": {
+          "$id": "4",
+          "Interpreter": 1
+        },
+        "BackgroundColor": "#00FFFFFF",
+        "IsSelected": true,
+        "Items": {
+          "$id": "5",
+          "$values": [
+            {
+              "$id": "6",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
+              "IsRectangleItem": true,
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#FF000000",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "7",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 0,
+                "BorderLeft": 0,
+                "BorderRight": 0,
+                "RadiusTopLeft": 5,
+                "RadiusTopRight": 5,
+                "RadiusBottomLeft": 5,
+                "RadiusBottomRight": 5,
+                "Bindings": {
+                  "$id": "8"
+                }
+              },
+              "Height": 240.0,
+              "Left": 0.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 425.0,
+              "BorderBottom": 0,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "d12155ef-699f-4fb5-8332-6e19cdbef4c5",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "BG",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "9"
+              }
+            },
+            {
+              "$id": "10",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.GradientItem, SimHub.Plugins",
+              "Color": {
+                "LinearGradientBrush": {
+                  "@StartPoint": "0.5,0",
+                  "@EndPoint": "0.5,1",
+                  "@MappingMode": "RelativeToBoundingBox",
+                  "@SpreadMethod": "Pad",
+                  "@Opacity": "1",
+                  "@xmlns": "http://schemas.microsoft.com/winfx/2006/xaml/presentation",
+                  "LinearGradientBrush.GradientStops": {
+                    "GradientStop": [
+                      {
+                        "@Color": "#FFDC143C",
+                        "@Offset": "0"
+                      },
+                      {
+                        "@Color": "#00000000",
+                        "@Offset": "1"
+                      }
+                    ]
+                  }
+                }
+              },
+              "Rotation": 270.0,
+              "UseRotation": true,
+              "CanResize": true,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "11",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 0,
+                "BorderLeft": 0,
+                "BorderRight": 0,
+                "RadiusTopLeft": 5,
+                "RadiusTopRight": 5,
+                "RadiusBottomLeft": 5,
+                "RadiusBottomRight": 5,
+                "Bindings": {
+                  "$id": "12"
+                }
+              },
+              "Height": 240.0,
+              "Left": 35.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": false,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 240.0,
+              "BorderBottom": 0,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "4ca5d27b-eba6-47da-b1fd-417c9569c3b2",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "ABS",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "13",
+                "Visible": {
+                  "$id": "14",
+                  "Formula": {
+                    "$id": "15",
+                    "Expression": "[ABSActive]"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Visible"
+                }
+              }
+            },
+            {
+              "$id": "16",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.GradientItem, SimHub.Plugins",
+              "Color": {
+                "LinearGradientBrush": {
+                  "@StartPoint": "0.5,0",
+                  "@EndPoint": "0.5,1",
+                  "@MappingMode": "RelativeToBoundingBox",
+                  "@SpreadMethod": "Pad",
+                  "@Opacity": "1",
+                  "@xmlns": "http://schemas.microsoft.com/winfx/2006/xaml/presentation",
+                  "LinearGradientBrush.GradientStops": {
+                    "GradientStop": [
+                      {
+                        "@Color": "#00FFFFFF",
+                        "@Offset": "0"
+                      },
+                      {
+                        "@Color": "#FF00BFFF",
+                        "@Offset": "1"
+                      }
+                    ]
+                  }
+                }
+              },
+              "Rotation": 270.0,
+              "UseRotation": true,
+              "CanResize": true,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "17",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 0,
+                "BorderLeft": 0,
+                "BorderRight": 0,
+                "RadiusTopLeft": 5,
+                "RadiusTopRight": 5,
+                "RadiusBottomLeft": 5,
+                "RadiusBottomRight": 5,
+                "Bindings": {
+                  "$id": "18"
+                }
+              },
+              "Height": 240.0,
+              "Left": 150.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": false,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 240.0,
+              "BorderBottom": 0,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "4ca5d27b-eba6-47da-b1fd-417c9569c3b2",
+              "IsFreezed": false,
+              "IsSelected": true,
+              "Name": "TC",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "19",
+                "Visible": {
+                  "$id": "20",
+                  "Formula": {
+                    "$id": "21",
+                    "Expression": "[TCActive]"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Visible"
+                }
+              }
+            },
+            {
+              "$id": "22",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.VerticalLinearGaugeItem, SimHub.Plugins",
+              "GaugeAlignment": 2,
+              "AutoSize": false,
+              "AutoSizeScale": 1.0,
+              "GaugeColor": "#FF90EE90",
+              "Minimum": 0.0,
+              "Maximum": 100.0,
+              "Value": 50.0,
+              "Steps": 0.0,
+              "PAW": 120.0,
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "23",
+                "BorderColor": "#FF90EE90",
+                "BorderTop": 2,
+                "BorderBottom": 2,
+                "BorderLeft": 2,
+                "BorderRight": 2,
+                "RadiusTopLeft": 5,
+                "RadiusTopRight": 5,
+                "RadiusBottomLeft": 5,
+                "RadiusBottomRight": 5,
+                "Bindings": {
+                  "$id": "24"
+                }
+              },
+              "Height": 240.0,
+              "Left": 0.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 30.0,
+              "BorderBottom": 2,
+              "BorderColor": "#FF90EE90",
+              "BorderLeft": 2,
+              "BorderRight": 2,
+              "BorderTop": 2,
+              "Id": "5c4d34f5-bf89-424c-b0ba-893cde02e907",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "Clutch",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "25",
+                "Value": {
+                  "$id": "26",
+                  "Formula": {
+                    "$id": "27",
+                    "Expression": "truncate([Clutch])"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Value"
+                },
+                "Visible": {
+                  "$id": "28",
+                  "Formula": {
+                    "$id": "29",
+                    "Expression": "[Clutch] > 0"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Visible"
+                }
+              }
+            },
+            {
+              "$id": "30",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.VerticalLinearGaugeItem, SimHub.Plugins",
+              "GaugeAlignment": 2,
+              "AutoSize": false,
+              "AutoSizeScale": 1.0,
+              "GaugeColor": "#FFDC143C",
+              "Minimum": 0.0,
+              "Maximum": 100.0,
+              "Value": 25.0,
+              "Steps": 0.0,
+              "PAW": 60.0,
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "31",
+                "BorderColor": "#FFDC143C",
+                "BorderTop": 2,
+                "BorderBottom": 2,
+                "BorderLeft": 2,
+                "BorderRight": 2,
+                "RadiusTopLeft": 5,
+                "RadiusTopRight": 5,
+                "RadiusBottomLeft": 5,
+                "RadiusBottomRight": 5,
+                "Bindings": {
+                  "$id": "32"
+                }
+              },
+              "Height": 240.0,
+              "Left": 0.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 30.0,
+              "BorderBottom": 2,
+              "BorderColor": "#FFDC143C",
+              "BorderLeft": 2,
+              "BorderRight": 2,
+              "BorderTop": 2,
+              "Id": "5c4d34f5-bf89-424c-b0ba-893cde02e907",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "Brake",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "33",
+                "Value": {
+                  "$id": "34",
+                  "Formula": {
+                    "$id": "35",
+                    "Expression": "truncate([Brake])"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Value"
+                },
+                "Visible": {
+                  "$id": "36",
+                  "Formula": {
+                    "$id": "37",
+                    "Expression": "[Brake] > 0"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Visible"
+                }
+              }
+            },
+            {
+              "$id": "38",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.VerticalLinearGaugeItem, SimHub.Plugins",
+              "GaugeAlignment": 2,
+              "AutoSize": false,
+              "AutoSizeScale": 1.0,
+              "GaugeColor": "#FF00BFFF",
+              "Minimum": 0.0,
+              "Maximum": 100.0,
+              "Value": 25.0,
+              "Steps": 0.0,
+              "PAW": 60.0,
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "39",
+                "BorderColor": "#FF00BFFF",
+                "BorderTop": 2,
+                "BorderBottom": 2,
+                "BorderLeft": 2,
+                "BorderRight": 2,
+                "RadiusTopLeft": 5,
+                "RadiusTopRight": 5,
+                "RadiusBottomLeft": 5,
+                "RadiusBottomRight": 5,
+                "Bindings": {
+                  "$id": "40",
+                  "BorderLeft": {
+                    "$id": "41",
+                    "Formula": {
+                      "$id": "42",
+                      "Expression": "if([Gas] > 0, 1, 0)"
+                    },
+                    "Mode": 2,
+                    "TargetPropertyName": "BorderLeft"
+                  },
+                  "BorderRight": {
+                    "$id": "43",
+                    "Formula": {
+                      "$id": "44",
+                      "Expression": "if([Gas] > 0, 1, 0)"
+                    },
+                    "Mode": 2,
+                    "TargetPropertyName": "BorderRight"
+                  }
+                }
+              },
+              "Height": 240.0,
+              "Left": 395.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": true,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 30.0,
+              "BorderBottom": 2,
+              "BorderColor": "#FF00BFFF",
+              "BorderLeft": 2,
+              "BorderRight": 2,
+              "BorderTop": 2,
+              "Id": "5c4d34f5-bf89-424c-b0ba-893cde02e907",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "Throttle",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "45",
+                "Value": {
+                  "$id": "46",
+                  "Formula": {
+                    "$id": "47",
+                    "Expression": "truncate([Throttle])"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Value"
+                },
+                "Visible": {
+                  "$id": "48",
+                  "Formula": {
+                    "$id": "49",
+                    "Expression": "[Throttle] > 0"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Visible"
+                }
+              }
+            }
+          ]
+        },
+        "Id": "498cb7d9-1b8b-425d-9d72-87a34241b06f",
+        "Name": "Pedals",
+        "Sid": 0,
+        "Bindings": {
+          "$id": "50"
+        }
+      },
+      {
+        "$id": "51",
+        "RenderingSkip": 0,
+        "InGameScreen": true,
+        "IdleScreen": true,
+        "PitScreen": true,
+        "ScreenScript": {
+          "$id": "52",
+          "Interpreter": 1
+        },
+        "BackgroundColor": "#00FFFFFF",
+        "IsSelected": false,
+        "Items": {
+          "$id": "53",
+          "$values": [
+            {
+              "$id": "54",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.GradientItem, SimHub.Plugins",
+              "Color": {
+                "LinearGradientBrush": {
+                  "@StartPoint": "0.5,0",
+                  "@EndPoint": "0.5,1",
+                  "@MappingMode": "RelativeToBoundingBox",
+                  "@SpreadMethod": "Pad",
+                  "@Opacity": "1",
+                  "@xmlns": "http://schemas.microsoft.com/winfx/2006/xaml/presentation",
+                  "LinearGradientBrush.GradientStops": {
+                    "GradientStop": [
+                      {
+                        "@Color": "#FFDC143C",
+                        "@Offset": "0"
+                      },
+                      {
+                        "@Color": "#00000000",
+                        "@Offset": "1"
+                      }
+                    ]
+                  }
+                }
+              },
+              "Rotation": 270.0,
+              "UseRotation": true,
+              "CanResize": true,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "55",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 0,
+                "BorderLeft": 0,
+                "BorderRight": 0,
+                "RadiusTopLeft": 5,
+                "RadiusTopRight": 5,
+                "RadiusBottomLeft": 5,
+                "RadiusBottomRight": 5,
+                "Bindings": {
+                  "$id": "56"
+                }
+              },
+              "Height": 240.0,
+              "Left": 35.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": false,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 240.0,
+              "BorderBottom": 0,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "4ca5d27b-eba6-47da-b1fd-417c9569c3b2",
+              "IsFreezed": false,
+              "IsSelected": true,
+              "Name": "ABS",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "57",
+                "Visible": {
+                  "$id": "58",
+                  "Formula": {
+                    "$id": "59",
+                    "Expression": "[ABSActive]"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Visible"
+                }
+              }
+            },
+            {
+              "$id": "60",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.GradientItem, SimHub.Plugins",
+              "Color": {
+                "LinearGradientBrush": {
+                  "@StartPoint": "0.5,0",
+                  "@EndPoint": "0.5,1",
+                  "@MappingMode": "RelativeToBoundingBox",
+                  "@SpreadMethod": "Pad",
+                  "@Opacity": "1",
+                  "@xmlns": "http://schemas.microsoft.com/winfx/2006/xaml/presentation",
+                  "LinearGradientBrush.GradientStops": {
+                    "GradientStop": [
+                      {
+                        "@Color": "#00FFFFFF",
+                        "@Offset": "0"
+                      },
+                      {
+                        "@Color": "#FF00BFFF",
+                        "@Offset": "1"
+                      }
+                    ]
+                  }
+                }
+              },
+              "Rotation": 270.0,
+              "UseRotation": true,
+              "CanResize": true,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "61",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 0,
+                "BorderLeft": 0,
+                "BorderRight": 0,
+                "RadiusTopLeft": 5,
+                "RadiusTopRight": 5,
+                "RadiusBottomLeft": 5,
+                "RadiusBottomRight": 5,
+                "Bindings": {
+                  "$id": "62"
+                }
+              },
+              "Height": 240.0,
+              "Left": 150.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": false,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 240.0,
+              "BorderBottom": 0,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "4ca5d27b-eba6-47da-b1fd-417c9569c3b2",
+              "IsFreezed": false,
+              "IsSelected": false,
+              "Name": "TC",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "63",
+                "Visible": {
+                  "$id": "64",
+                  "Formula": {
+                    "$id": "65",
+                    "Expression": "[TCActive]"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Visible"
+                }
+              }
+            }
+          ]
+        },
+        "Id": "152a213d-1f38-4b56-a7d0-46d9bb41ae59",
+        "Name": "Empty",
+        "Sid": 0,
+        "Bindings": {
+          "$id": "66"
+        }
+      }
+    ]
+  },
+  "SnapToGrid": true,
+  "HideLabels": true,
+  "ShowBoundingRectangles": true,
+  "GridSize": 5,
+  "SelectedScreen": {
+    "$ref": "3"
+  },
+  "Images": {
+    "$id": "67",
+    "$values": []
+  },
+  "Metadata": {
+    "$id": "68",
+    "ScreenCount": 2.0,
+    "InGameScreensIndexs": {
+      "$id": "69",
+      "$values": [
+        0,
+        1
+      ]
+    },
+    "IdleScreensIndexs": {
+      "$id": "70",
+      "$values": [
+        0,
+        1
+      ]
+    },
+    "MainPreviewIndex": 0,
+    "IsOverlay": false,
+    "ShowInTaskBar": true,
+    "Width": 425.0,
+    "Height": 240.0,
+    "OverlaySizeWarning": false,
+    "MetadataVersion": 2.0,
+    "EnableOnDashboardMessaging": true,
+    "PitScreensIndexs": {
+      "$id": "71",
+      "$values": [
+        0,
+        1
+      ]
+    }
+  },
+  "ShowOnScreenControls": true,
+  "ShowInTaskBar": true,
+  "IsOverlay": false,
+  "EnableClickThroughOverlay": true,
+  "EnableOnDashboardMessaging": true
+}
