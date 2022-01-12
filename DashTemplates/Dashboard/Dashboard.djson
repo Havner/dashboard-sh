@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "53881bdb-fe6c-4472-b00a-1bf1afe3b4f6",
+  "Id": "5b0d2cf7-8617-4138-823b-18584a6b4286",
   "BaseHeight": 300,
   "BaseWidth": 425,
   "BackgroundColor": "#FF000000",
@@ -1871,7 +1871,7 @@
                 }
               },
               "RenderingSkip": 0,
-              "ShowSelection": true,
+              "ShowSelection": false,
               "CanResize": false,
               "Childrens": {
                 "$id": "153",
@@ -2828,7 +2828,7 @@
                       }
                     },
                     "RenderingSkip": 0,
-                    "ShowSelection": true,
+                    "ShowSelection": false,
                     "CanResize": false,
                     "Childrens": {
                       "$id": "237",
@@ -3296,19 +3296,42 @@
                             }
                           },
                           "RenderingSkip": 0,
-                          "ShowSelection": true,
+                          "ShowSelection": false,
                           "CanResize": false,
                           "Childrens": {
                             "$id": "278",
                             "$values": [
                               {
                                 "$id": "279",
-                                "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.RectangleItem, SimHub.Plugins",
-                                "IsRectangleItem": true,
+                                "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.GradientItem, SimHub.Plugins",
+                                "Color": {
+                                  "RadialGradientBrush": {
+                                    "@Center": "0.5,0.5",
+                                    "@RadiusX": "0.5",
+                                    "@RadiusY": "0.5",
+                                    "@GradientOrigin": "0.5,0.5",
+                                    "@MappingMode": "RelativeToBoundingBox",
+                                    "@SpreadMethod": "Pad",
+                                    "@Opacity": "1",
+                                    "@xmlns": "http://schemas.microsoft.com/winfx/2006/xaml/presentation",
+                                    "RadialGradientBrush.GradientStops": {
+                                      "GradientStop": [
+                                        {
+                                          "@Color": "#FFFF0000",
+                                          "@Offset": "0"
+                                        },
+                                        {
+                                          "@Color": "#00FF0000",
+                                          "@Offset": "1"
+                                        }
+                                      ]
+                                    }
+                                  }
+                                },
                                 "Rotation": 0.0,
                                 "UseRotation": false,
                                 "CanResize": true,
-                                "BackgroundColor": "#FFFF0000",
+                                "BackgroundColor": "#00FFFFFF",
                                 "BlurRadius": 0.0,
                                 "EnableBlur": false,
                                 "BorderStyle": {
@@ -3339,9 +3362,9 @@
                                 "BorderLeft": 0,
                                 "BorderRight": 0,
                                 "BorderTop": 0,
-                                "Id": "98b59623-9cf2-49cb-be09-dea0174c2516",
+                                "Id": "c7133807-ea99-44fb-8f67-d51e52dfb9a5",
                                 "IsFreezed": false,
-                                "IsSelected": false,
+                                "IsSelected": true,
                                 "Name": "Detached",
                                 "RenderingSkip": 0,
                                 "Sid": 0,
@@ -3351,7 +3374,7 @@
                                     "$id": "283",
                                     "Formula": {
                                       "$id": "284",
-                                      "Expression": "[GameRawData.CurrentPlayerTelemetry.mDetached]"
+                                      "Expression": "[GameRawData.CurrentPlayerTelemetry.mDetached]\r\n"
                                     },
                                     "Mode": 2,
                                     "TargetPropertyName": "Visible"
@@ -7158,7 +7181,7 @@
                 }
               },
               "RenderingSkip": 0,
-              "ShowSelection": false,
+              "ShowSelection": true,
               "CanResize": false,
               "Childrens": {
                 "$id": "628",
@@ -7190,7 +7213,7 @@
                       }
                     },
                     "RenderingSkip": 0,
-                    "ShowSelection": false,
+                    "ShowSelection": true,
                     "CanResize": false,
                     "Childrens": {
                       "$id": "632",
@@ -9036,7 +9059,7 @@
                           "BorderTop": 0,
                           "Id": "25c28292-e1e7-4ca2-b1af-b3e89b48ee9f",
                           "IsFreezed": true,
-                          "IsSelected": true,
+                          "IsSelected": false,
                           "Name": "DRS",
                           "RenderingSkip": 0,
                           "Sid": 0,

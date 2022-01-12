@@ -1,5 +1,5 @@
 Unified Dashboard for rF2/AMS2/AC/ACC
-Version: 0.5
+Version: 0.5.1
 Author: Havner
 
 1. TL;DR

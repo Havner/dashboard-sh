@@ -175,7 +175,7 @@ function DBSH_hasDRS()
 	var drs = false;
 	switch ($prop('DataCorePlugin.CurrentGame')) {
 		case 'AssettoCorsa':
-			drs = $prop('GameRawData.StaticInfo.DBSH_hasDRS') ? true : false;
+			drs = $prop('GameRawData.StaticInfo.hasDRS') ? true : false;
 			break;
 		case 'RFactor2':
 			drs = DBSH_classSupportsDrs();
