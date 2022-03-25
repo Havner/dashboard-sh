@@ -6,11 +6,18 @@ const DBSH_tyreWearColor = [50, 100];
 const DBSH_tyreTempColorC = [30, 70, 110, 140];
 const DBSH_brakeTempColorC = [100, 200, 400, 800];
 
-const DBSH_tyrePressColorKPA_RF2 = [130, 150, 170, 190];
+const DBSH_tyrePressColorKPA_RF2  = [130, 150, 170, 190];
 const DBSH_tyrePressColorBAR_AMS2 = [1.4, 1.7, 2.0, 2.2];
-const DBSH_tyrePressColorPSI_AC = [20, 25, 28, 30];
-const DBSH_tyrePressColorPSI_ACC_GT3 = [26.5, 27.5, 28, 29];
-const DBSH_tyrePressColorPSI_ACC_GT4 = [25.5, 26.5, 27, 28];
+const DBSH_tyrePressColorPSI_AC   = [20, 25, 28, 30];
+
+const DBSH_tyrePressColorPSI_ACC_WET = [28.5, 29.5, 31.0, 32.0];  // CDA
+const DBSH_tyrePressColorPSI_ACC_GT3 = [26.3, 27.3, 27.9, 28.9];  // CDA
+const DBSH_tyrePressColorPSI_ACC_GT4 = [25.8, 26.8, 27.4, 28.4];  // CDA
+
+const DBSH_tyrePressColorPSI_ACC_CUP = [25, 26, 28, 29];  // intentionally relaxed, TODO
+const DBSH_tyrePressColorPSI_ACC_ST  = [25, 26, 28, 29];  // intentionally relaxed, TODO
+const DBSH_tyrePressColorPSI_ACC_CHL = [25, 26, 28, 29];  // intentionally relaxed, TODO
+const DBSH_tyrePressColorPSI_ACC_TCX = [25, 26, 28, 29];  // intentionally relaxed, TODO
 
 // ================= main function ===================
 
@@ -117,7 +124,7 @@ function DBSH_outlap()
 
 function DBSH_deltaExist(lapProp)
 {
-	// If the current lap is DBSH_outlap, the live deltas will be invalid
+	// If the current lap is outlap, the live deltas will be invalid
 	if (DBSH_outlap()) {
 		return false;
 	}
@@ -175,13 +182,13 @@ function DBSH_hasDRS()
 	var drs = false;
 	switch ($prop('DataCorePlugin.CurrentGame')) {
 		case 'AssettoCorsa':
-			drs = $prop('GameRawData.StaticInfo.hasDRS') ? true : false;
+			drs = $prop('DataCorePlugin.GameRawData.StaticInfo.hasDRS') ? true : false;
 			break;
 		case 'RFactor2':
 			drs = DBSH_classSupportsDrs();
 			break;
 		case 'Automobilista2':
-			drs = false;
+			drs = ($prop('DataCorePlugin.GameRawData.mDrsState') & 1) ? true : false;
 			break;
 	}
 	return drs;
@@ -192,14 +199,24 @@ function DBSH_showDRS()
 	if (!DBSH_hasDRS())
 		return -1;
 
-	if ($prop('DRSEnabled'))
-		return 2;
-	if ($prop('DRSAvailable'))
-		return 1;
+	switch ($prop('DataCorePlugin.CurrentGame')) {
+		case 'AssettoCorsa':
+		case 'RFactor2':
+			if ($prop('DRSEnabled'))
+				return 2;
+			if ($prop('DRSAvailable'))
+				return 1;
+			break;
+		case 'Automobilista2':
+			if (($prop('DataCorePlugin.GameRawData.mDrsState') & 16))
+				return 2;
+			if (($prop('DataCorePlugin.GameRawData.mDrsState') & 12))
+				return 1;
+			break;
+	}
+
 	return 0;
 }
-
-
 
 // ================= ACC details =================
 
@@ -213,7 +230,7 @@ function DBSH_addZero(i)
 
 function DBSH_getClock()
 {
-	const seconds = $prop('GameRawData.Graphics.clock');
+	const seconds = $prop('DataCorePlugin.GameRawData.Graphics.clock');
 	const date = new Date(seconds * 1000);
 
 	const hours = date.getUTCHours().toString();
@@ -226,31 +243,71 @@ function DBSH_getClass()
 {
 	const id = $prop('CarId');
 
+	if (id == 'bmw_m2_cs_racing')
+		return 'TCX';
+	if (id == 'ferrari_488_challenge_evo')
+		return 'CHL';
+
+	if (id.search('huracan_st') >= 0)
+		return 'ST';
+	if (id.search('gt3_cup') >= 0)
+		return 'CUP';
+
 	if (id.search('gt4') >= 0)
 		return 'GT4';
-	if (id == "porsche_991ii_gt3_cup")
-		return 'CUP';
-	if (id == "lamborghini_huracan_st")
-		return 'ST';
 
 	return 'GT3';
 }
 
 function DBSH_getPressureGradient()
 {
+	const compound = $prop('DataCorePlugin.GameRawData.Graphics.TyreCompound');
+	if (compound == 'wet_compound')
+		return DBSH_tyrePressColorPSI_ACC_WET;
+
 	const cl = DBSH_getClass();
-	if (cl == 'GT4') {
+	switch (cl) {
+	case 'GT3':
+		return DBSH_tyrePressColorPSI_ACC_GT3;
+	case 'GT4':
 		return DBSH_tyrePressColorPSI_ACC_GT4;
+	case 'CUP':
+		return DBSH_tyrePressColorPSI_ACC_CUP;
+	case 'ST':
+		return DBSH_tyrePressColorPSI_ACC_ST;
+	case 'CHL':
+		return DBSH_tyrePressColorPSI_ACC_CHL;
+	case 'TCX':
+		return DBSH_tyrePressColorPSI_ACC_TCX;
 	}
-	return DBSH_tyrePressColorPSI_ACC_GT3;
+
+	// fallback not required, getClass() fallbacks to GT3
+}
+
+function DBSH_getTC1Available()
+{
+	const cl = DBSH_getClass();
+	switch (cl) {
+		case "CUP":
+			return false;
+	}
+
+	return true;
 }
 
 function DBSH_getTC2Available()
 {
-	const id = $prop('CarId');
+	const cl = DBSH_getClass();
 
-	if (id.search('gt4') >= 0)
-		return false;
+	switch (cl) {
+		case "GT4":
+		case "CUP":
+		case "ST":
+		case "TCX":
+			return false;
+	}
+
+	const id = $prop('CarId');
 
 	switch(id) {
 		case "amr_v12_vantage_gt3":
@@ -272,8 +329,6 @@ function DBSH_getTC2Available()
 		case "nissan_gt_r_gt3_2018":
 		case "porsche_991_gt3_r":
 		case "lamborghini_gallardo_rex":
-		case "porsche_991ii_gt3_cup":
-		case "lamborghini_huracan_st":
 			return false;
 	}
 
@@ -282,20 +337,21 @@ function DBSH_getTC2Available()
 
 function DBSH_getEngMapAvailable()
 {
-	const id = $prop('CarId');
+	const cl = DBSH_getClass();
 
-	if (id.search('gt4') >= 0)
-		return false;
-
-	switch(id) {
-		case "lamborghini_huracan_st":
-		case "porsche_991ii_gt3_cup":
+	switch (cl) {
+		case "GT4":
+		case "CUP":
+		case "ST":
+		case "TCX":
 			return false;
 	}
 
 	return true;
 }
 
+// this function is constantly being implemented in SimHub itself, this is for
+// either new or forgotten cars that don't have a correct offset in SH yet
 function DBSH_getBrakeBias()
 {
 	const bb = $prop('BrakeBias');
@@ -304,11 +360,19 @@ function DBSH_getBrakeBias()
 	var offset = 0.0;
 
 	switch(id) {
-		case "bmw_m4_gt3":
-			offset = -14.0;
+		case "audi_r8_lms_evo_ii":
+		case "lamborghini_huracan_st":
+		case "lamborghini_huracan_st_evo2":
+			offset = -14;
 			break;
-		case "porsche_991ii_gt3_cup":
-			offset = 10.0;
+		case "porsche_992_gt3_cup":
+			offset = -5;
+			break;
+		case "ferrari_488_challenge_evo":
+			offset = -13;
+			break;
+		case "bmw_m2_cs_racing":
+			offset = -17;
 			break;
 	}
 

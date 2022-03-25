@@ -1,3 +1,14 @@
+0.5.2
+- reworked systems section for Automobilista 2:
+  - TC/ABS support
+  - DRS support
+  - boost moved over the throttle bar
+  - reordered/reworked some elements (e.g. lights)
+- added support for new cars for ACC:
+  - different elements displayed on systems section depending on a car
+  - separate pressure color ranges depending on a class
+  - separate pressure color range for wet tires
+
 0.5.1
 - rFactor 2 detached graphic made gradient
 - AC DRS fixed

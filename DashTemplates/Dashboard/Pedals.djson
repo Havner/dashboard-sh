@@ -1,7 +1,7 @@
 {
   "$id": "1",
   "Version": 2,
-  "Id": "e0ac052b-8f68-4f79-8b1f-074313004c96",
+  "Id": "77bfc8e6-647f-4661-b9ab-84ecfc75da01",
   "BaseHeight": 240,
   "BaseWidth": 425,
   "BackgroundColor": "#FF000000",
@@ -63,7 +63,7 @@
               "BorderTop": 0,
               "Id": "d12155ef-699f-4fb5-8332-6e19cdbef4c5",
               "IsFreezed": false,
-              "IsSelected": false,
+              "IsSelected": true,
               "Name": "BG",
               "RenderingSkip": 0,
               "Sid": 0,
@@ -210,7 +210,7 @@
               "BorderTop": 0,
               "Id": "4ca5d27b-eba6-47da-b1fd-417c9569c3b2",
               "IsFreezed": false,
-              "IsSelected": true,
+              "IsSelected": false,
               "Name": "TC",
               "RenderingSkip": 0,
               "Sid": 0,
@@ -466,6 +466,96 @@
                   "TargetPropertyName": "Visible"
                 }
               }
+            },
+            {
+              "$id": "50",
+              "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.VerticalLinearGaugeItem, SimHub.Plugins",
+              "GaugeAlignment": 2,
+              "AutoSize": false,
+              "AutoSizeScale": 1.0,
+              "GaugeColor": "#FF696969",
+              "Minimum": 0.0,
+              "Maximum": 100.0,
+              "Value": 20.0,
+              "Steps": 0.0,
+              "PAW": 48.0,
+              "Rotation": 0.0,
+              "UseRotation": false,
+              "CanResize": true,
+              "BackgroundColor": "#00FFFFFF",
+              "BlurRadius": 0.0,
+              "EnableBlur": false,
+              "BorderStyle": {
+                "$id": "51",
+                "BorderColor": "#FFFFFFFF",
+                "BorderTop": 0,
+                "BorderBottom": 0,
+                "BorderLeft": 0,
+                "BorderRight": 0,
+                "RadiusTopLeft": 0,
+                "RadiusTopRight": 0,
+                "RadiusBottomLeft": 0,
+                "RadiusBottomRight": 0,
+                "Bindings": {
+                  "$id": "52"
+                }
+              },
+              "Height": 240.0,
+              "Left": 407.0,
+              "Opacity": 100.0,
+              "Top": 0.0,
+              "Visible": false,
+              "BlinkDelay": 250.0,
+              "BlinkEnabled": false,
+              "Width": 6.0,
+              "BorderBottom": 0,
+              "BorderColor": "#FFFFFFFF",
+              "BorderLeft": 0,
+              "BorderRight": 0,
+              "BorderTop": 0,
+              "Id": "a770da7d-d304-43ef-aab4-ef8621fda60d",
+              "IsFreezed": false,
+              "IsSelected": true,
+              "Name": "Boost",
+              "RenderingSkip": 0,
+              "Sid": 0,
+              "Bindings": {
+                "$id": "53",
+                "GaugeColor": {
+                  "$id": "54",
+                  "Formula": {
+                    "$id": "55",
+                    "Expression": "if([GameRawData.mBoostActive], 1, 0)\r\n"
+                  },
+                  "StartColor": "#FF696969",
+                  "EnableMiddleColor": false,
+                  "MiddleColor": "#FF000000",
+                  "MiddleColorValue": 1.0,
+                  "EndColor": "#FFDC143C",
+                  "StartColorValue": 0.0,
+                  "EndColorValue": 1.0,
+                  "Mode": 4,
+                  "TargetPropertyName": "GaugeColor"
+                },
+                "Visible": {
+                  "$id": "56",
+                  "Formula": {
+                    "$id": "57",
+                    "Expression": "isnull([GameRawData.mBoostAmount], 0) > 0\r\n"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Visible"
+                },
+                "Value": {
+                  "$id": "58",
+                  "Formula": {
+                    "$id": "59",
+                    "Expression": "[GameRawData.mBoostAmount]\r\n"
+                  },
+                  "Mode": 2,
+                  "TargetPropertyName": "Value"
+                }
+              }
             }
           ]
         },
@@ -473,26 +563,26 @@
         "Name": "Pedals",
         "Sid": 0,
         "Bindings": {
-          "$id": "50"
+          "$id": "60"
         }
       },
       {
-        "$id": "51",
+        "$id": "61",
         "RenderingSkip": 0,
         "InGameScreen": true,
         "IdleScreen": true,
         "PitScreen": true,
         "ScreenScript": {
-          "$id": "52",
+          "$id": "62",
           "Interpreter": 1
         },
         "BackgroundColor": "#00FFFFFF",
         "IsSelected": false,
         "Items": {
-          "$id": "53",
+          "$id": "63",
           "$values": [
             {
-              "$id": "54",
+              "$id": "64",
               "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.GradientItem, SimHub.Plugins",
               "Color": {
                 "LinearGradientBrush": {
@@ -523,7 +613,7 @@
               "BlurRadius": 0.0,
               "EnableBlur": false,
               "BorderStyle": {
-                "$id": "55",
+                "$id": "65",
                 "BorderColor": "#FFFFFFFF",
                 "BorderTop": 0,
                 "BorderBottom": 0,
@@ -534,7 +624,7 @@
                 "RadiusBottomLeft": 5,
                 "RadiusBottomRight": 5,
                 "Bindings": {
-                  "$id": "56"
+                  "$id": "66"
                 }
               },
               "Height": 240.0,
@@ -552,16 +642,16 @@
               "BorderTop": 0,
               "Id": "4ca5d27b-eba6-47da-b1fd-417c9569c3b2",
               "IsFreezed": false,
-              "IsSelected": true,
+              "IsSelected": false,
               "Name": "ABS",
               "RenderingSkip": 0,
               "Sid": 0,
               "Bindings": {
-                "$id": "57",
+                "$id": "67",
                 "Visible": {
-                  "$id": "58",
+                  "$id": "68",
                   "Formula": {
-                    "$id": "59",
+                    "$id": "69",
                     "Expression": "[ABSActive]"
                   },
                   "Mode": 2,
@@ -570,7 +660,7 @@
               }
             },
             {
-              "$id": "60",
+              "$id": "70",
               "$type": "SimHub.Plugins.OutputPlugins.GraphicalDash.Models.GradientItem, SimHub.Plugins",
               "Color": {
                 "LinearGradientBrush": {
@@ -601,7 +691,7 @@
               "BlurRadius": 0.0,
               "EnableBlur": false,
               "BorderStyle": {
-                "$id": "61",
+                "$id": "71",
                 "BorderColor": "#FFFFFFFF",
                 "BorderTop": 0,
                 "BorderBottom": 0,
@@ -612,7 +702,7 @@
                 "RadiusBottomLeft": 5,
                 "RadiusBottomRight": 5,
                 "Bindings": {
-                  "$id": "62"
+                  "$id": "72"
                 }
               },
               "Height": 240.0,
@@ -635,11 +725,11 @@
               "RenderingSkip": 0,
               "Sid": 0,
               "Bindings": {
-                "$id": "63",
+                "$id": "73",
                 "Visible": {
-                  "$id": "64",
+                  "$id": "74",
                   "Formula": {
-                    "$id": "65",
+                    "$id": "75",
                     "Expression": "[TCActive]"
                   },
                   "Mode": 2,
@@ -653,7 +743,7 @@
         "Name": "Empty",
         "Sid": 0,
         "Bindings": {
-          "$id": "66"
+          "$id": "76"
         }
       }
     ]
@@ -666,21 +756,21 @@
     "$ref": "3"
   },
   "Images": {
-    "$id": "67",
+    "$id": "77",
     "$values": []
   },
   "Metadata": {
-    "$id": "68",
+    "$id": "78",
     "ScreenCount": 2.0,
     "InGameScreensIndexs": {
-      "$id": "69",
+      "$id": "79",
       "$values": [
         0,
         1
       ]
     },
     "IdleScreensIndexs": {
-      "$id": "70",
+      "$id": "80",
       "$values": [
         0,
         1
@@ -695,7 +785,7 @@
     "MetadataVersion": 2.0,
     "EnableOnDashboardMessaging": true,
     "PitScreensIndexs": {
-      "$id": "71",
+      "$id": "81",
       "$values": [
         0,
         1

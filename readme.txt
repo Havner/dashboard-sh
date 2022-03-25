@@ -5,11 +5,12 @@ Author: Havner
 1. TL;DR
 
   1. Unpack the content of the ZIP to the SimHub directory
-  2. Have a look at dashboard.js, few options there.
-  3. Assign A-D in SimHub, they change some runtime settings
-  4. Add the overlay to some overlay layout of yours or run the
+  2. Install the fonts
+  3. Have a look at dashboard.js, few options there.
+  4. Assign A-D in SimHub, they change some runtime settings
+  5. Add the overlay to some overlay layout of yours or run the
      dashboard on your device
-  5. Enjoy!
+  6. Enjoy!
 
 2. About
 
@@ -21,6 +22,8 @@ glance, but for it to still be quite readable.
 
 Copy the "JavascriptExtensions" and "DashTemplates" to the SimHub
 installation directory, e.g.: "C:\Program Files (x86)\SimHub".
+
+Install the included fonts.
 
 When you launch the SimHub the "Dashboard" and "Dashboard USB" should
 appear in "Dash Studio" section, in "Overlays" tab and "Dashboards"
